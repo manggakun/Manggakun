@@ -1,10 +1,18 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  p Welcome Mangga
+    div(class= 'div-menu')
+        a(class='menu' href='#home') Home
+        a(class='menu' href='#project') Projects
+        a(class='menu' href='#mtma') MTMA
+        a(class='menu' href='#hobby') K-Things
 
-  ul
-    each val, key in data
-      li= key + ': ' + val.nama
+    h1= title
+    p Welcome to #{title}
+    p Welcome Mangga
+
+
+
+//-   ul
+//-     each val, key in data
+//-       li= val.name + ": " + val.description + ", platform: " + val.platform + ", stat: " + val.status

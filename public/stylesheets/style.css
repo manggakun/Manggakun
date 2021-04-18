@@ -10,3 +10,11 @@ a {
 h1 {
   color: red;
 }
+
+.menu {
+  margin: 15px 50px 15px 50px;
+}
+
+.div-menu {
+  text-align: right;
+}
