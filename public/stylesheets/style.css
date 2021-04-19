@@ -11,10 +11,24 @@ h1 {
   color: red;
 }
 
+.container {
+  background: #e0e0e0; border: 1px dashed #c0c0c0; height: 50px; margin-bottom: 10px;
+}
+
 .menu {
   margin: 15px 50px 15px 50px;
+  /*padding: 10px 10px 10px 10px;*/
 }
 
 .div-menu {
   text-align: right;
+
+  display: block;
+}
+
+.div-title {
+  width: 100%;
+  height: 400px;
+  background: #ffe0e0;  border: 1px dashed #ffc0c0; float: left;
+
 }

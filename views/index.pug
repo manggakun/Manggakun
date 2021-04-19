@@ -1,15 +1,18 @@
 extends layout
 
 block content
-    div(class= 'div-menu')
-        a(class='menu' href='#home') Home
-        a(class='menu' href='#project') Projects
-        a(class='menu' href='#mtma') MTMA
-        a(class='menu' href='#hobby') K-Things
+    div(class= 'container')
+        div(class= 'div-title')
+            div(class= 'div-menu')
+                a(class='menu' href='#home') Home
+                a(class='menu' href='#project') Projects
+                a(class='menu' href='#mtma') MTMA
+                a(class='menu' href='#hobby') K-Things
+            h1= title
+            p Welcome to #{title}
+            p Welcome Mangga
 
-    h1= title
-    p Welcome to #{title}
-    p Welcome Mangga
+
 
 
 
