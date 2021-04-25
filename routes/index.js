@@ -16,7 +16,7 @@ router.get('/k101', function(req, res, next) {
 const conn = new pg.Pool({user: 'postgres', host: 'localhost', database: 'manggakun', password: 'sudo', port: 5432});
 router.get('/project', function(req, res, next) {
   conn.query('select * from project', function(err, result) {
-    res.render('index', { title: 'Projects', data: result.rows});
+    res.render('project', { title: 'Projects', data: result.rows});
   });
 });
 
@@ -24,6 +24,14 @@ router.get('/project/json', function(req, res, next) {
   conn.query('select * from project', function(err, result) {
     res.end(JSON.stringify(result.rows));
   });
+});
+
+router.get('/kthings', function(req, res, next) {
+  res.render('kthings', { title: 'K-Things' });
+});
+
+router.get('/blog', function(req, res, next) {
+  res.render('blog', { title: 'Blogs' });
 });
 
 module.exports = router;
