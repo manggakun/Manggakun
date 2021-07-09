@@ -1,0 +1,32 @@
+extends layout
+
+block content
+    div(class= 'container')
+        div(class= 'div-menu')
+            a(class='menu' href='#home') Home
+            a(class='menu' href='#project') Projects
+            a(class='menu' href='#mtma') MTMA
+            a(class='menu' href='#hobby') K-Things
+        div(class= 'div-title')
+            h1= title
+            p Welcome to #{title}
+            p Welcome Mangga
+
+    div(class= 'article-entry-container')
+        div(class= 'entry')
+            p Here is the example of an article sneak peak in the home page. This container displays two of the images in article. Click here to review the full article. This is the example of an article sneak peak in the home page. This container displays two of the images in article. Click here to review the full article.
+               This is the example of an article sneak peak in the home page. This container displays two of the images in article. Click here to review the full article.
+                This is the example of an article sneak peak in the home page. This container displays two of the images in article. Click here to review the full article.
+                This is the example of an article sneak peak in the home page. This container displays two of the images in article. Click here to review the full article.
+                This is the example of an article sneak peak in the home page. This container displays two of the images in article. Click here to review the full article.
+            img(class= 'img1' src='/images/cat1.jpg')
+            img(class= 'img2' src='/images/cat2.jpg')
+
+
+
+
+
+
+//-   ul
+//-     each val, key in data
+//-       li= val.name + ": " + val.description + ", platform: " + val.platform + ", stat: " + val.status

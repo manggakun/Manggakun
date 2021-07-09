@@ -3,17 +3,21 @@ var router = express.Router();
 /* bind with database. */
 var pg = require('pg');
 
+// connect to database postgres
+require('dotenv').config()
+const conn = new pg.Pool({user: process.env.DB_USER, host: process.env.DB_HOST, database: process.env.DB_DATA, password: process.env.DB_PASS, port: process.env.DB_PORT});
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  conn.query('select * from article', function(err, result) {
+    res.render('index', { data: result.rows});
+  });
 });
 
 router.get('/k101', function(req, res, next) {
   res.render('index', { title: 'Yowes' });
 });
 
-// connect to database postgres
-const conn = new pg.Pool({user: 'postgres', host: 'localhost', database: 'manggakun', password: 'sudo', port: 5432});
 router.get('/project', function(req, res, next) {
   conn.query('select * from project', function(err, result) {
     res.render('project', { title: 'Projects', data: result.rows});

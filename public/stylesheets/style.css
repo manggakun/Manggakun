@@ -1,34 +1,39 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.article-image-back,
+.article-image-front {
+  display: block;
+  height: 200px;
+  width: 200px;
 }
 
-a {
-  color: #00B7FF;
+.article-images {
+  position: relative;
 }
 
-h1 {
-  color: red;
+.article-image-front {
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
-.container {
-  background: #e0e0e0; border: 1px dashed #c0c0c0; height: 50px; margin-bottom: 10px;
+.article-text {
+  width: calc(100% - 220px);
+  padding-right: 20px;
 }
 
-.menu {
-  margin: 15px 50px 15px 50px;
-  /*padding: 10px 10px 10px 10px;*/
+.logo {
+  height: 32px;
+  padding-right: 10px;
 }
 
-.div-menu {
-  text-align: right;
+.article-content {
+  display: flex;
+}
 
+.article-title {
+  width: 100%;
   display: block;
 }
 
-.div-title {
-  width: 100%;
-  height: 400px;
-  background: #ffe0e0;  border: 1px dashed #ffc0c0; float: left;
-
+.article-entry-container {
+  padding: 20px 40px;
 }

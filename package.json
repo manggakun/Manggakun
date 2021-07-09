@@ -14,5 +14,10 @@
     "pg": "^8.6.0",
     "pug": "2.0.0-beta11",
     "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "consolidate": "^0.16.0",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6"
   }
 }

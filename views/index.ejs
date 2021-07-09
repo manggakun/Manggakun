@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <img class="logo" src="/images/pepeW.png">
+            <span class="fs-4">Manggakun</span>
+        </a>
+
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">MTMA</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">K-Things</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        </ul>
+    </header>
+</div>
+
+<div class="container">
+
+    <div class="row">
+        <% data.forEach(function(article){ %>
+
+         <div class="col-md-12" >
+             <div class="article-entry-container">
+             <div class="article-title">
+                 <h3><%= article.title %></h3>
+             </div>
+             <div class="article-content">
+                 <div class="article-text">
+                     <%= article.excerpt %>
+                 </div>
+                 <div class="article-images">
+                     <div class="article-image-back" style="background: url('<%= article.thumbnail %>'); background-size: cover; background-repeat: no-repeat; background-position: center"></div>
+                     <div class="article-image-front" style="background: url('<%= article.thumbnail2 %>'); background-size: cover; background-repeat: no-repeat; background-position: center"></div>
+                 </div>
+             </div>
+             </div>
+         </div>
+        <% }); %>
+    </div>
+</div>
+
+
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+</html>
